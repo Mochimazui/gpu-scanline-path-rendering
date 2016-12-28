@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD594DB2-BFC4-4F3E-BDF4-0C80C702BBF9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gpu-scanline</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>gpu-scanline</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)3rd/SDL-2.0.3/include/;$(SolutionDir)3rd/glm-0.9.6.3/;$(SolutionDir)3rd/cudpp/include/;$(SolutionDir)3rd/boost-1.60.0/include/;$(ProjectDir)src/;$(SolutionDir)gpu-scanline/src/mpvg/driver/cuda/lib/;$(SolutionDir)gpu-scanline/src/mpvg/driver/cuda/src/;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)3rd/boost-1.60.0/lib_msvc2013_x64/;$(SolutionDir)3rd/cudpp/lib/;$(SolutionDir)3rd/SDL-2.0.3/lib/Debug/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)3rd/SDL-2.0.3/include/;$(SolutionDir)3rd/glm-0.9.6.3/;$(SolutionDir)3rd/boost-1.60.0/include/;$(ProjectDir)src/;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)3rd/boost-1.60.0/lib_msvc2013_x64/;$(SolutionDir)3rd/SDL-2.0.3/lib/Release/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;SDL2.lib;SDL2main.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <AdditionalOptions>-Xcompiler "/wd 4819" %(AdditionalOptions)</AdditionalOptions>
+      <CodeGeneration>compute_20,sm_20;compute_52,sm_52;</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Optimization>InheritFromHost</Optimization>
+      <GenerateRelocatableDeviceCode>false</GenerateRelocatableDeviceCode>
+      <PtxAsOptionV>false</PtxAsOptionV>
+      <Include>
+      </Include>
+    </CudaCompile>
+    <CudaLink>
+      <GPUDebugInfo>true</GPUDebugInfo>
+    </CudaLink>
+    <CudaLink>
+      <Optimization>InheritFromProject</Optimization>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;SDL2.lib;SDL2main.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <AdditionalOptions>-Xcompiler "/wd 4819 /WX /O2 /Ot /Zi" %(AdditionalOptions)</AdditionalOptions>
+      <CodeGeneration>compute_20,sm_20;compute_52,sm_52;</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GenerateRelocatableDeviceCode>false</GenerateRelocatableDeviceCode>
+      <PtxAsOptionV>false</PtxAsOptionV>
+      <Include>
+      </Include>
+    </CudaCompile>
+    <CudaLink>
+      <PerformDeviceLink>true</PerformDeviceLink>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\bezier_curve.cpp" />
+    <ClCompile Include="src\mochimazui\config.cpp" />
+    <ClCompile Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.cpp" />
+    <ClCompile Include="src\text_util.cpp" />
+    <ClCompile Include="src\vg_config.cpp" />
+    <ClCompile Include="src\cuda\cuda_cached_allocator.cpp" />
+    <ClCompile Include="src\mochimazui\3rd\gl_4_5_compatibility.c" />
+    <ClCompile Include="src\mochimazui\3rd\stb_impl.c" />
+    <ClCompile Include="src\mochimazui\bitmap.cpp" />
+    <ClCompile Include="src\mochimazui\camera_3d.cpp" />
+    <ClCompile Include="src\mochimazui\camera_controller_3d.cpp" />
+    <ClCompile Include="src\mochimazui\file.cpp" />
+    <ClCompile Include="src\mochimazui\glgui.cpp" />
+    <ClCompile Include="src\mochimazui\glpp.cpp" />
+    <ClCompile Include="src\rasterizer\shared\ras_base.cpp" />
+    <CudaCompile Include="src\rasterizer\kernel\animation.cu" />
+    <CudaCompile Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.cu" />
+    <CudaCompile Include="src\rasterizer\shared\ras_qm_mask.cu">
+      <FileType>CppCode</FileType>
+    </CudaCompile>
+    <ClCompile Include="src\rvg.cpp" />
+    <ClCompile Include="src\rvg_loader.cpp" />
+    <ClCompile Include="src\svg.cpp" />
+    <ClCompile Include="src\svg_load.cpp" />
+    <ClCompile Include="src\svg_loader.cpp" />
+    <ClCompile Include="src\vg_main.cpp" />
+    <ClCompile Include="src\vg_container.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\bezier_curve_type.h" />
+    <ClInclude Include="src\bounding_box.h" />
+    <ClInclude Include="src\mochimazui\config.h" />
+    <ClInclude Include="src\modern_gpu\include\device\ctaloadbalance.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctamerge.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctascan.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctasearch.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctasegreduce.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctasegscan.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctasegsort.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\ctasortedsearch.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\devicetypes.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\deviceutil.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\intrinsics.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\launchbox.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\loadstore.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\serialsets.cuh" />
+    <ClInclude Include="src\modern_gpu\include\device\sortnetwork.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels_ext\search_ext.cuh" />
+    <ClInclude Include="src\modern_gpu\include\mgpudevice.cuh" />
+    <ClInclude Include="src\modern_gpu\include\mgpuenums.h" />
+    <ClInclude Include="src\modern_gpu\include\mgpuhost.cuh" />
+    <ClInclude Include="src\modern_gpu\include\mmio.h" />
+    <ClInclude Include="src\modern_gpu\include\moderngpu.cuh" />
+    <ClInclude Include="src\modern_gpu\include\sparsematrix.h" />
+    <ClInclude Include="src\modern_gpu\include\util\format.h" />
+    <ClInclude Include="src\modern_gpu\include\util\mgpualloc.h" />
+    <ClInclude Include="src\modern_gpu\include\util\mgpucontext.h" />
+    <ClInclude Include="src\modern_gpu\include\util\static.h" />
+    <ClInclude Include="src\modern_gpu\include\util\util.h" />
+    <ClInclude Include="src\rasterizer\kernel\animation.h" />
+    <ClInclude Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.h" />
+    <ClInclude Include="src\text_util.h" />
+    <ClInclude Include="src\vg_config.h" />
+    <ClInclude Include="src\cuda\cuda_cached_allocator.h" />
+    <ClInclude Include="src\cuda\cuda_sort.h" />
+    <ClInclude Include="src\bezier_curve.h" />
+    <ClInclude Include="src\cutil_math.h" />
+    <ClInclude Include="src\gradient.h" />
+    <ClInclude Include="src\mochimazui\3rd\gl_4_5_compatibility.h" />
+    <ClInclude Include="src\mochimazui\3rd\helper_cuda.h" />
+    <ClInclude Include="src\mochimazui\3rd\helper_string.h" />
+    <ClInclude Include="src\mochimazui\3rd\json.hpp" />
+    <ClInclude Include="src\mochimazui\3rd\stb_image.h" />
+    <ClInclude Include="src\mochimazui\3rd\stb_image_resize.h" />
+    <ClInclude Include="src\mochimazui\3rd\stb_image_write.h" />
+    <ClInclude Include="src\mochimazui\3rd\stb_truetype.h" />
+    <ClInclude Include="src\mochimazui\bitmap.h" />
+    <ClInclude Include="src\mochimazui\camera_2d.h" />
+    <ClInclude Include="src\mochimazui\camera_3d.h" />
+    <ClInclude Include="src\mochimazui\camera_controller_2d.h" />
+    <ClInclude Include="src\mochimazui\camera_controller_3d.h" />
+    <ClInclude Include="src\mochimazui\color.h" />
+    <ClInclude Include="src\mochimazui\cuda_array.h" />
+    <ClInclude Include="src\mochimazui\file.h" />
+    <ClInclude Include="src\mochimazui\glgui.h" />
+    <ClInclude Include="src\mochimazui\glpp.h" />
+    <ClInclude Include="src\mochimazui\option.h" />
+    <ClInclude Include="src\mochimazui\stdio_ext.h" />
+    <ClInclude Include="src\mochimazui\string.h" />
+    <ClInclude Include="src\mochimazui\vector_type.h" />
+    <ClInclude Include="src\modern_gpu\include\kernels\bulkinsert.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\bulkremove.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\csrtools.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\cubradixsort.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\intervalmove.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\join.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\loadbalance.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\localitysort.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\merge.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\mergesort.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\reduce.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\reducebykey.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\scan.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\search.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\segmentedsort.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\segreduce.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\segreducecsr.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\sets.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\sortedsearch.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels\spmvcsr.cuh" />
+    <ClInclude Include="src\modern_gpu\include\kernels_ext\segmentedsort_ext.cuh" />
+    <ClInclude Include="src\rapidxml.hpp" />
+    <ClInclude Include="src\rapidxml_iterators.hpp" />
+    <ClInclude Include="src\rapidxml_print.hpp" />
+    <ClInclude Include="src\rapidxml_utils.hpp" />
+    <ClInclude Include="src\rasterizer\shared\ras_base.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_cut.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_define.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_device_func.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_factory.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_pipeline_mode.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_qm_mask.h" />
+    <ClInclude Include="src\rasterizer\shared\ras_scan.h" />
+    <ClInclude Include="src\rvg.h" />
+    <ClInclude Include="src\rvg_loader.h" />
+    <ClInclude Include="src\svg.h" />
+    <ClInclude Include="src\svg_loader.h" />
+    <ClInclude Include="src\thrust_impl.h" />
+    <ClInclude Include="src\timer.h" />
+    <ClInclude Include="src\vg_container.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_32.frag.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_32.vert.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_8.frag.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_8.vert.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_8.frag.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_8.vert.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_32.frag.glsl" />
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_32.vert.glsl" />
+    <None Include="..\working_directory\shader\shared\curve.frag.glsl" />
+    <None Include="..\working_directory\shader\shared\curve.vert.glsl" />
+    <None Include="..\working_directory\shader\shared\fps.frag.glsl" />
+    <None Include="..\working_directory\shader\shared\fps.vert.glsl" />
+    <None Include="..\working_directory\shader\shared\output_scale.frag.glsl" />
+    <None Include="..\working_directory\shader\shared\output_scale.vert.glsl" />
+    <None Include="..\working_directory\ui\minimal_ui.json" />
+    <None Include="..\working_directory\ui\ui.json" />
+    <None Include="..\working_directory\vg_default.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\cuda\cuda_sort.cu" />
+    <CudaCompile Include="src\rasterizer\shared\ras_base.cu" />
+    <CudaCompile Include="src\rasterizer\shared\ras_cut.cu" />
+    <CudaCompile Include="src\thrust_impl_scan.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.targets" />
+  </ImportGroup>
+</Project>

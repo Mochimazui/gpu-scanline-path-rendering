@@ -1,0 +1,15 @@
+{
+  "window": {
+    "id": "top", "type": "window",
+    "layout": "horizontal",
+    "width": 1200, "height": 1024,
+    "title": "GPU Scanline VG",
+    "subwindows": [
+      { "id": "display","type": "subwindow" }
+    ]
+  },
+
+  "subwindows": {
+  }
+}
+

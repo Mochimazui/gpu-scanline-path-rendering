@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ui">
+      <UniqueIdentifier>{431991a4-860e-4af7-a13a-1b29cb6498dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\mochimazui">
+      <UniqueIdentifier>{0d59f8ab-bbe7-4f80-a905-b650e40b9035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mochimazui\3rd">
+      <UniqueIdentifier>{2b07ec80-e7bb-482a-bc1c-ccb732cc3fba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cuda">
+      <UniqueIdentifier>{39fb9c86-d5b6-4914-8f7f-0fccf9231f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu">
+      <UniqueIdentifier>{a4906173-4068-4fd5-85b9-644d144e51d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu\include">
+      <UniqueIdentifier>{1208625b-fd67-43db-af5b-aece8d61bd31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu\include\kernels">
+      <UniqueIdentifier>{4f32e4d0-fd00-440f-9322-2288dc73125a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu\include\kernels_ext">
+      <UniqueIdentifier>{7810fb74-64c3-430b-80c5-b8f11ea768b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer">
+      <UniqueIdentifier>{a0caf1aa-00d4-41a5-b4ce-7f2f4fda206f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer\shared">
+      <UniqueIdentifier>{5aa73916-da16-455c-ac79-39a722fd1c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer_shader">
+      <UniqueIdentifier>{2eb70966-5824-48ca-9710-c077cc20f931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer_shader\R_cut_A_stencil">
+      <UniqueIdentifier>{e133c1e8-a8c7-4d08-b226-fec1f299fcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer_shader\shared">
+      <UniqueIdentifier>{ce5bf5b7-141f-46ce-a009-f5713b320c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{7a5cfd08-c64c-46d1-938f-ae8c72591eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vg">
+      <UniqueIdentifier>{7abd1da6-80c7-4d15-9371-2584cf01c5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer\R_cut_A_mask_comb_scanline">
+      <UniqueIdentifier>{ba98a958-0349-4276-82b9-7850a6365761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\rasterizer\kernel">
+      <UniqueIdentifier>{804624f6-c520-4cbf-b2b6-a74c79852473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xml">
+      <UniqueIdentifier>{8bd5c023-cc9a-40e4-a132-d696199edaa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu\include\util">
+      <UniqueIdentifier>{1d8acf7a-1c03-4920-b4ec-ee4a64672587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mordern_gpu\include\device">
+      <UniqueIdentifier>{dcf3510b-ce26-400c-b19a-1843095d8f72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\vg_main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\glgui.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\glpp.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\file.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cuda\cuda_cached_allocator.cpp">
+      <Filter>src\cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\bitmap.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\camera_3d.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\camera_controller_3d.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rasterizer\shared\ras_base.cpp">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\3rd\stb_impl.c">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\3rd\gl_4_5_compatibility.c">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vg_container.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svg_loader.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rvg_loader.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rvg.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svg.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svg_load.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vg_config.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mochimazui\config.cpp">
+      <Filter>src\mochimazui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.cpp">
+      <Filter>src\rasterizer\R_cut_A_mask_comb_scanline</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bezier_curve.cpp">
+      <Filter>src\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text_util.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\mochimazui\3rd\json.hpp">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\stb_image.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\stb_truetype.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\glgui.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\glpp.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\option.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\string.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\file.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\color.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\cuda_array.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cuda\cuda_sort.h">
+      <Filter>src\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cuda\cuda_cached_allocator.h">
+      <Filter>src\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\bitmap.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\camera_2d.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\camera_controller_2d.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\camera_3d.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\camera_controller_3d.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\bulkinsert.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\bulkremove.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\csrtools.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\cubradixsort.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\intervalmove.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\join.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\loadbalance.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\localitysort.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\merge.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\mergesort.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\reduce.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\reducebykey.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\scan.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\search.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\segmentedsort.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\segreduce.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\segreducecsr.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\sets.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\sortedsearch.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels\spmvcsr.cuh">
+      <Filter>src\mordern_gpu\include\kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels_ext\segmentedsort_ext.cuh">
+      <Filter>src\mordern_gpu\include\kernels_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\stdio_ext.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_base.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_cut.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_define.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_scan.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_device_func.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\stb_image_write.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\stb_image_resize.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\helper_cuda.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\helper_string.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\3rd\gl_4_5_compatibility.h">
+      <Filter>src\mochimazui\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vg_container.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\svg_loader.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rvg_loader.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rvg.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\svg.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\vector_type.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cutil_math.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_factory.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_pipeline_mode.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\shared\ras_qm_mask.h">
+      <Filter>src\rasterizer\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vg_config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mochimazui\config.h">
+      <Filter>src\mochimazui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\kernel\animation.h">
+      <Filter>src\rasterizer\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thrust_impl.h">
+      <Filter>src\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.h">
+      <Filter>src\rasterizer\R_cut_A_mask_comb_scanline</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidxml.hpp">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidxml_iterators.hpp">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidxml_print.hpp">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidxml_utils.hpp">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bezier_curve.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bezier_curve_type.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gradient.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bounding_box.h">
+      <Filter>src\vg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\text_util.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\kernels_ext\search_ext.cuh">
+      <Filter>src\mordern_gpu\include\kernels_ext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\mgpudevice.cuh">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\mgpuenums.h">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\mgpuhost.cuh">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\mmio.h">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\moderngpu.cuh">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\sparsematrix.h">
+      <Filter>src\mordern_gpu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctaloadbalance.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctamerge.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctascan.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctasearch.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctasegreduce.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctasegscan.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctasegsort.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\ctasortedsearch.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\devicetypes.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\deviceutil.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\intrinsics.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\launchbox.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\loadstore.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\serialsets.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\device\sortnetwork.cuh">
+      <Filter>src\mordern_gpu\include\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\util\format.h">
+      <Filter>src\mordern_gpu\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\util\mgpualloc.h">
+      <Filter>src\mordern_gpu\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\util\mgpucontext.h">
+      <Filter>src\mordern_gpu\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\util\static.h">
+      <Filter>src\mordern_gpu\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modern_gpu\include\util\util.h">
+      <Filter>src\mordern_gpu\include\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\working_directory\ui\ui.json">
+      <Filter>ui</Filter>
+    </None>
+    <None Include="..\working_directory\ui\minimal_ui.json">
+      <Filter>ui</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\output_scale.frag.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\output_scale.vert.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\curve.frag.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\curve.vert.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\working_directory\vg_default.cfg">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_32.frag.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_32.vert.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_8.frag.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\ms_output_8.vert.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_32.vert.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_32.frag.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_8.frag.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\R_cut_A_stencil\output_8.vert.glsl">
+      <Filter>src\rasterizer_shader\R_cut_A_stencil</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\fps.frag.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\working_directory\shader\shared\fps.vert.glsl">
+      <Filter>src\rasterizer_shader\shared</Filter>
+    </None>
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\cuda\cuda_sort.cu">
+      <Filter>src\cuda</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\rasterizer\shared\ras_cut.cu">
+      <Filter>src\rasterizer\shared</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\rasterizer\shared\ras_base.cu">
+      <Filter>src\rasterizer\shared</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\rasterizer\shared\ras_qm_mask.cu">
+      <Filter>src\rasterizer\shared</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\rasterizer\kernel\animation.cu">
+      <Filter>src\rasterizer\kernel</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\thrust_impl_scan.cu">
+      <Filter>src\cuda</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\rasterizer\R_cut_A_mask_comb_scanline\ras_cut_mask_comb_scanline.cu">
+      <Filter>src\rasterizer\R_cut_A_mask_comb_scanline</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

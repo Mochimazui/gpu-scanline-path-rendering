@@ -1,0 +1,42 @@
+{
+  "window": {
+    "id": "top", "type": "window",
+    "layout": "horizontal",
+    "width": 1200, "height": 1080,
+    "title": "GLGUI - Test",
+    "subwindows": [
+      {
+        "id": "left-subwindow",
+        "type": "frame",
+        "width": 128,
+        "size-policy-x": "fix",
+        "border-width": 1,
+        "layout": "vertical",
+        "subwindows": [
+          { "id": "frag-size", "type": "label", "text": "Fragment size:" },
+          { "id": "frag-size-1", "type": "radio-button", "text": "1" },
+          { "id": "frag-size-2", "type": "radio-button", "text": "2" },
+          { "id": "frag-size-4", "type": "radio-button", "text": "4" },
+          { "id": "frag-size-8", "type": "radio-button", "text": "8" },
+
+          { "id": "h-line-1", "type": "horizontal-line","line-width": 2 },
+          { "id": "empty", "type": "label", "text": "Empty" },
+          { "id": "tb", "type": "push-button", "text": "Empty" },
+          { "id": "tcb", "type": "check-box", "text": "Empty" },
+
+		  { "id": "h-line-2", "type": "horizontal-line","line-width": 2 },
+		  { "id": "output-label", "type": "label", "text": "Output" },
+		  { "id": "default", "type": "radio-button", "text": "Default" },
+          { "id": "per-sample-blend", "type": "radio-button", "text": "Per sample blend" }
+
+        ]
+      },
+      { "id": "vline", "type": "vertical-line","line-width": 2 },
+      { "id": "display","type": "subwindow" }
+    ]
+  },
+
+  "subwindows": {
+  }
+}
+
