@@ -2,6 +2,8 @@
 
 SIGGRAPH Asia 2016 project.
 
+Please download code together with dependency and test data from http://gaps-zju.org/pathrendering/
+
 ## Pre-built Binary 
 
 ./x64/release/gpu-scanline.exe. Tested on 64 bit Windows 10. Copy to ./working_directory to run. <br/>
