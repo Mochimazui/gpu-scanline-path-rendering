@@ -486,7 +486,7 @@ __global__ void k_mark_merged_fragment_and_span(
 	// but *never* generates merged fragment
 
 	if (i == 0) {
-		if (x1 < 0 || y1 < 0 || x1 >= width || y1 >= width) {
+		if (x1 < 0 || y1 < 0 || x1 >= width || y1 >= height) {
 			path_frag_flag = 0;
 		}
 		else {
@@ -509,7 +509,7 @@ __global__ void k_mark_merged_fragment_and_span(
 		int16_t x0 = ((int16_t)(yx_0 & 0xFFFF)) - 0x7FFF;
 		int16_t y0 = ((int16_t)(yx_0 >> 16)) - 0x7FFF;
 
-		if (x1 < 0 || y1 < 0 || x1 >= width || y1 >= width) {
+		if (x1 < 0 || y1 < 0 || x1 >= width || y1 >= height) {
 			path_frag_flag = 0;
 		}
 		else if (pid_0 != pid_1 || yx_0 != yx_1) {
